@@ -1,0 +1,266 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* BODY */
+body {
+  background: #111;
+  color: white;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0,0,0,0.9);
+  color: white;
+  padding: 15px 30px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+/* NAV */
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #e63946;
+}
+
+/* BOTÃO */
+.btn {
+  background: #e63946;
+  padding: 10px 18px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ff4d5a;
+  transform: scale(1.05);
+}
+
+/* HERO */
+#hero {
+  height: 100vh;
+  background: url("https://images.unsplash.com/photo-1600891964599-f61ba0e24092") no-repeat center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+/* overlay escuro */
+#hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+/* conteúdo acima do overlay */
+#hero h2,
+#hero button {
+  position: relative;
+  z-index: 1;
+}
+
+/* BOTÃO HERO */
+#hero button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: none;
+  background: #e63946;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+#hero button:hover {
+  transform: scale(1.1);
+  background: #ff4d5a;
+}
+
+/* SEÇÕES */
+section {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+/* GRID CARDÁPIO */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* CARD */
+.card {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  transition: 0.4s;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+
+  /* ANIMAÇÃO */
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+/* QUANDO APARECE */
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* HOVER */
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(255,0,0,0.3);
+}
+
+/* BOTÃO CARD */
+.card button {
+  margin-top: 10px;
+  padding: 10px;
+  background: #e63946;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.card button:hover {
+  background: #ff4d5a;
+  transform: scale(1.1);
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  #hero h2 {
+    font-size: 1.5rem;
+  }
+}/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  color: white;
+  padding: 15px 30px;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.btn {
+  background: #e63946;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
+/* HERO COM IMAGEM */
+#hero {
+  height: 90vh;
+  background: url("https://images.unsplash.com/photo-1600891964599-f61ba0e24092") no-repeat center/cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 2px 2px 5px black;
+}
+
+#hero button {
+  margin-top: 20px;
+  padding: 12px 20px;
+  border: none;
+  background: #e63946;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* SEÇÕES */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* GRID CARDÁPIO */
+.grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #f5f5f5;
+  padding: 20px;
+  width: 200px;
+  border-radius: 10px;
+
+  /* ANIMAÇÃO */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: aparecer 0.5s forwards;
+}
+
+@keyframes aparecer {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+}
+
+.card:hover {
+cxc  transform: scale(1.05);
+}
+
+.card button {
+  margin-top: 10px;
+  padding: 10px;
+  background: #111;
+  color: white;
+  border: none;
+  cursor: pointer;
+}

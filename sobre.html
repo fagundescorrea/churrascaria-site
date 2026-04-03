@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Churrasco Recife</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <h1>🔥 Fogo Brasil</h1>
+
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#menu">Cardápio</a>
+    <a href="#contato">Contato</a>
+    <a href="reserva.html" class="btn">Reservar</a>
+  </nav>
+</header>
+
+<section id="hero">
+  <h2>Experiência Premium em Churrasco</h2>
+  <p>Rodízio completo + ambiente sofisticado</p>
+  <button onclick="irReserva()">Reservar Agora</button>
+</section>
+
+<section id="sobre">
+  <h2>Sobre</h2>
+  <p>Uma churrascaria premium com cortes nobres, buffet completo e experiência única.</p>
+</section>
+
+<section id="menu">
+  <h2>Cardápio</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>Picanha</h3>
+      <p>R$ 79,90</p>
+      <button onclick="addCarrinho('Picanha')">Pedir</button>
+    </div>
+
+    <div class="card">
+      <h3>Costela</h3>
+      <p>R$ 69,90</p>
+      <button onclick="addCarrinho('Costela')">Pedir</button>
+    </div>
+
+    <div class="card">
+      <h3>Fraldinha</h3>
+      <p>R$ 59,90</p>
+      <button onclick="addCarrinho('Fraldinha')">Pedir</button>
+    </div>
+
+  </div>
+</section>
+
+<section id="carrinho">
+  <h2>🛒 Carrinho</h2>
+  <ul id="listaCarrinho"></ul>
+</section>
+
+<section id="contato">
+  <h2>Contato</h2>
+  <p>📍 Recife - PE</p>
+  <button onclick="abrirWhats()">Pedir pelo WhatsApp</button>
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
